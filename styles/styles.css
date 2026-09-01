@@ -17,6 +17,7 @@ header h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 #options {
@@ -28,7 +29,7 @@ header h1 {
     gap: 30px;
     padding: 20px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-    
+    width: 180px;
 }
 
 .choice-btn {
@@ -85,8 +86,10 @@ header h1 {
 
 /* This selectors and properties are for de draw area */
 #draw-area {
-    width: 600px;
-    height: 600px;
+    box-shadow: 0 0 8px #00000070;
+    margin-bottom: 40px;
+    width: 500px;
+    height: 500px;
     display: grid;
     grid-template-columns: repeat(8,1fr);
     grid-template-rows: repeat(8, 1fr);
