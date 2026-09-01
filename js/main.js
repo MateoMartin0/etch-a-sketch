@@ -20,4 +20,8 @@ sizeBar.addEventListener("input", function () {
         let divForGrid = document.createElement("div");
         drawArea.appendChild(divForGrid);
     }
+
+    //modify the grid to obey the Size Bar posiion
+    drawArea.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
+    drawArea.style.gridTemplateRows = `repeat(${value}, 1fr)`;
 })
