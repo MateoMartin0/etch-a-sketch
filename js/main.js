@@ -36,6 +36,7 @@ clearBtn.addEventListener("click", function() {
     }
 })
 
+// This functions change the mouse's mode
 let currentMode = "none";
 
 eraserBtn.addEventListener("click", function() {
@@ -44,4 +45,14 @@ eraserBtn.addEventListener("click", function() {
 
 colorBtn.addEventListener("click", function() {
     currentMode = "color";
+})
+
+// This function makes the draw zone work 
+drawArea.addEventListener("mousemove", function(e) {
+    if (e.buttons === 1 && currentMode === "eraser") {
+        e.target.style.backgroundColor = "white";
+    }
+    if (e.buttons === 1 && currentMode === "color"){
+        e.target.style.backgroundColor = "black";
+    }
 })
