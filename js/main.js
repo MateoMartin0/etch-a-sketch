@@ -29,4 +29,9 @@ sizeBar.addEventListener("input", function () {
     drawArea.style.gridTemplateRows = `repeat(${value}, 1fr)`;
 })
 
-addEventListener
+// The clear function becomes white each grid's divs 
+clearBtn.addEventListener("click", function() {
+    for (let i = 0; i < drawArea.children.length; i++){
+        drawArea.children[i].style.backgroundColor = "white";
+    }
+})
