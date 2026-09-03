@@ -5,6 +5,7 @@ let sizeBar = document.querySelector(".size-bar");
 const clearBtn = document.querySelector("#clear");
 const colorBtn = document.querySelector("#color");
 const eraserBtn = document.querySelector("#eraser");
+const colorPicker = document.querySelector(".colorPicker");
 
 // This method listen the move of the (slider bar) --> represents the size of the draw zone
 sizeBar.addEventListener("input", function () {
@@ -38,21 +39,26 @@ clearBtn.addEventListener("click", function() {
 
 // This functions change the mouse's mode
 let currentMode = "none";
+let currentColor;
 
 eraserBtn.addEventListener("click", function() {
     currentMode = "eraser";
 })
 
 colorBtn.addEventListener("click", function() {
+    colorPicker.click()
     currentMode = "color";
 })
 
+colorPicker.addEventListener("input", function() {
+        currentColor = colorPicker.value;
+});
 // This function makes the draw zone work 
 drawArea.addEventListener("mousemove", function(e) {
     if (e.buttons === 1 && currentMode === "eraser") {
         e.target.style.backgroundColor = "white";
     }
     if (e.buttons === 1 && currentMode === "color"){
-        e.target.style.backgroundColor = "black";
+        e.target.style.backgroundColor = currentColor;
     }
 })

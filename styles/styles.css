@@ -47,6 +47,10 @@ header h1 {
     transform: scale(1.02);
 }
 
+.colorPicker {
+    display: none;
+}
+
 .bar-container {
     display: flex;
     flex-direction: column;
