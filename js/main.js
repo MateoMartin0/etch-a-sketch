@@ -2,6 +2,9 @@ let drawArea = document.querySelector("#draw-area");
 let buttons = document.querySelectorAll(".choice-btn");
 let sizeDisplay = document.querySelector(".size-display");
 let sizeBar = document.querySelector(".size-bar");
+const clearBtn = document.querySelector("#clear");
+const colorBtn = document.querySelector("#color");
+const eraserBtn = document.querySelector("#eraser");
 
 // This method listen the move of the (slider bar) --> represents the size of the draw zone
 sizeBar.addEventListener("input", function () {
@@ -16,7 +19,7 @@ sizeBar.addEventListener("input", function () {
     }
 
     //create the draw zone
-    for (let i = 1; i <= currentSize; i++){
+    for (let i = 1; i <= currentSize; i++) {
         let divForGrid = document.createElement("div");
         drawArea.appendChild(divForGrid);
     }
@@ -25,3 +28,5 @@ sizeBar.addEventListener("input", function () {
     drawArea.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
     drawArea.style.gridTemplateRows = `repeat(${value}, 1fr)`;
 })
+
+addEventListener
