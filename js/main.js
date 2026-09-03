@@ -7,6 +7,16 @@ const colorBtn = document.querySelector("#color");
 const eraserBtn = document.querySelector("#eraser");
 const colorPicker = document.querySelector(".colorPicker");
 
+// this prevent a bug if the user doesn't move the size bar
+window.addEventListener("load", function() {
+    let value = sizeBar.value;
+    let currentSize = value * value;
+    for (let i = 1; i <= currentSize; i++) {
+        let divForGrid = document.createElement("div");
+        drawArea.appendChild(divForGrid);
+    }
+})
+
 // This method listen the move of the (slider bar) --> represents the size of the draw zone
 sizeBar.addEventListener("input", function () {
     let value = sizeBar.value;
