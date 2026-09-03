@@ -35,3 +35,13 @@ clearBtn.addEventListener("click", function() {
         drawArea.children[i].style.backgroundColor = "white";
     }
 })
+
+let currentMode = "none";
+
+eraserBtn.addEventListener("click", function() {
+    currentMode = "eraser";
+})
+
+colorBtn.addEventListener("click", function() {
+    currentMode = "color";
+})
