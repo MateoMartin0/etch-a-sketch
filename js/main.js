@@ -72,3 +72,4 @@ drawArea.addEventListener("mousemove", function(e) {
         e.target.style.backgroundColor = currentColor;
     }
 })
+console.log("VERSION NUEVA");
